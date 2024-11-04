@@ -8,7 +8,6 @@ root.title("Spelling Checker")
 root.geometry("700x400")
 root.config(background="#dae6f6")
 
-# Function to check spelling
 def check_spelling():
     word = enter_text.get()
     blob = TextBlob(word)
@@ -19,10 +18,8 @@ def check_spelling():
     else:
         result_text = f"Corrected spelling: {corrected_word}"
     
-    # Display the result
     result_label.config(text=result_text)
 
-# Set up the GUI elements
 heading = Label(root, text="Spelling Checker", font=("Times New Roman", 30, "bold"), bg="gray", fg="white")
 heading.pack(pady=(50, 0))
 
@@ -36,5 +33,4 @@ button.pack(pady=20)
 result_label = Label(root, font=("poppins", 20), bg="#dae6f6", fg="#364971")
 result_label.place(x=100, y=250)
 
-# Run the main loop
 root.mainloop()
